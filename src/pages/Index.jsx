@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
-  const [showIframe, setShowIframe] = useState(false);
+  
   const audioRef = useRef(null);
 
   const playAudio = () => {
