@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
-  const audioRef = useRef(null);
+  
 
   const [showIframe, setShowIframe] = useState(false);
 
@@ -30,8 +30,6 @@ const Index = () => {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-        ) : (
-          <audio ref={audioRef} src="https://www.youtube.com/embed/VRq4I1a1iVw?start=3" />
         )}
       </div>
     </div>
