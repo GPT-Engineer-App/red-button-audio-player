@@ -19,7 +19,7 @@ const Index = () => {
         >
           Play Sound
         </Button>
-        {showIframe ? (
+        {showIframe && (
           <iframe
             width="186"
             height="105"
@@ -30,7 +30,7 @@ const Index = () => {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-        ) : null}
+        )}
       </div>
     </div>
   );
