@@ -19,7 +19,7 @@ const Index = () => {
         >
           Play Sound
         </Button>
-        {showIframe ? (
+        {showIframe && (
           <iframe
             width="186"
             height="105"
