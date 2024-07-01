@@ -1,14 +1,29 @@
-// Update this page (the content is just a fallback if you fail and example)
+import React, { useRef } from "react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
+  const audioRef = useRef(null);
+
+  const playAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 3;
+      audioRef.current.play();
+      setTimeout(() => {
+        audioRef.current.pause();
+      }, 2000);
+    }
+  };
+
   return (
     <div className="h-screen w-screen flex items-center justify-center">
-      {/* Update with components here - default to put new layout sections as separate components in the components folder, and import them here */}
       <div>
-        <h1 className="text-3xl text-center">Your Blank Canvas</h1>
-        <p className="text-center">
-          Chat with the agent to start making edits.
-        </p>
+        <Button
+          onClick={playAudio}
+          className="bg-red-500 text-white text-2xl p-4 rounded-full"
+        >
+          Play Sound
+        </Button>
+        <audio ref={audioRef} src="https://www.youtube.com/embed/VRq4I1a1iVw?start=3" />
       </div>
     </div>
   );
